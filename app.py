@@ -24,7 +24,7 @@ mapeamento_ia = {
     1: "I am furious angry mad and enraged",               # Raiva
     2: "I feel anxious nervous worried and uneasy",         # Ansiedade
     3: "I am so sad depressed unhappy and lonely",         # Tristeza
-    4: "I feel envy jealous and want what others have",    # Inveja
+    4: "I am feeling very jealous and envious of my friend's things",    # Inveja
     5: "I am terrified scared afraid and frightened"       # Medo
 }
 
