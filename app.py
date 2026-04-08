@@ -18,14 +18,13 @@ if 'passo' not in st.session_state:
     st.session_state.passo = 0
     st.session_state.votos = []
 
-
 mapeamento_ia = {
-    0: "I am so happy joyful glad and wonderful",           # Alegria
-    1: "I am furious angry mad and enraged",               # Raiva
-    2: "I feel anxious nervous worried and uneasy",         # Ansiedade
-    3: "I am so sad depressed unhappy and lonely",         # Tristeza
-    4: "envy jealous jealousy covetous",    # Inveja
-    5: "I am terrified scared afraid and frightened"       # Medo
+    0: "joy amusement approval excitement gratitude love admiration", #Alegria
+    1: "anger annoyance disapproval",                                  #Raiva
+    2: "nervousness fear",                                              #Ansiedade
+    3: "sadness disappointment grief remorse",                          #Tristeza
+    4: "desire longing wanting craving",                                #Inveja
+    5: "fear nervousness"                                               #Medo/Ansiedade
 }
 
 perguntas = [
@@ -64,7 +63,7 @@ else:
     st.header("Resultado Final")
     
     if not st.session_state.votos:
-        resultado_final = "joy" 
+        resultado_final = "Alegria" 
     else:
         contagem = Counter(st.session_state.votos)
         mais_comuns = contagem.most_common()
@@ -79,26 +78,25 @@ else:
         "votos": str(st.session_state.votos),
         "resultado": resultado_final
     }
-    df_log = pd.DataFrame([novo_dado])
-    df_log.to_csv("historico_sunflower.csv", mode='a', header=False, index=False)
+    pd.DataFrame([novo_dado]).to_csv("historico_sunflower.csv", mode='a', header=False, index=False)
 
- 
     icones = {
-        "joy": "🌻 Amarelo Radiante (Alegria)",
-        "anger": "🥀 Vermelho (Raiva)",
-        "fear": "😰 Azul (Ansiedade/Medo)",
-        "sadness": "😢 Cinza (Tristeza)",
-        "envy": "🟢 Verde (Inveja)",
+        "Alegria": "🌻 Amarelo Radiante",
+        "Raiva": "🥀 Vermelho (Raiva)",
+        "Ansiedade": "😰 Azul (Ansiedade)",
+        "Tristeza": "😢 Cinza (Tristeza)",
+        "Inveja": "🟢 Verde (Inveja)",
         "Misto": "🟣 Roxo (Falar com Psicólogo)"
     }
 
-    st.subheader(f"Estado do Avatar: {icones.get(resultado_final, f'Detetado: {resultado_final}')}")
+    estado_texto = icones.get(resultado_final, f"Detetado: {resultado_final}")
+    st.subheader(f"Estado do Avatar: {estado_texto}")
 
-    if resultado_final == "joy":
+    if resultado_final == "Alegria":
         st.balloons()
-        st.success("Parece que estás a ter um bom dia! Continua assim.")
+        st.success("Que bom! O Girassol está feliz por você.")
     else:
-        st.error("💡 Sugestão do Girassol: Seria importante conversar com o teu psicólogo sobre como te sentes.")
+        st.error("💡 O Girassol sugere: Seria importante conversar com seu psicólogo.")
 
     if st.button("Reiniciar Questionário"):
         st.session_state.passo = 0
