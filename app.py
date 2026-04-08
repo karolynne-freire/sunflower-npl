@@ -24,7 +24,6 @@ mapeamento_ia = {
     2: "nervousness fear",                                              #Ansiedade
     3: "sadness disappointment grief remorse",                          #Tristeza
     4: "desire longing wanting craving",                                #Inveja
-    5: "fear nervousness"                                               #Medo/Ansiedade
 }
 
 perguntas = [
@@ -33,7 +32,6 @@ perguntas = [
     "3. Você se sentiu muito preocupado ou ansioso?",
     "4. Você se sentiu triste ou desanimado?",
     "5. Você sentiu inveja ou queria algo que não era seu?",
-    "6. Você sentiu medo de alguma coisa?"
 ]
 
 st.title("Sunflower 🌻")

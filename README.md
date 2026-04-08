@@ -50,7 +50,7 @@ O gráfico abaixo apresenta a acurácia obtida por diferentes algoritmos testado
 **Acurácia:** `68,4%`
 
  **🛡️ Justificativa Técnica (Eficiência vs. Acurácia):**
-Embora outros modelos pudessem apresentar métricas superiores, a escolha do Naive Bayes com **68,4% de acurácia** foi uma decisão de engenharia focada na **viabilidade do app mobile**:
+Embora outros modelos pudessem apresentar métricas superiores, a escolha do Naive Bayes com **69,0% de acurácia** foi uma decisão de engenharia focada na **viabilidade do app mobile**:
 
   * **Baixíssima Latência:** Crucial para o público infantil; a resposta precisa ser imediata para não quebrar o fluxo lúdico.
   * **Leveza:** O modelo ocupa pouco espaço e processa rápido, permitindo que o Sunflower rode em diversos dispositivos sem depender de hardware potente.
