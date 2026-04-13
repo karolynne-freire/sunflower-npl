@@ -47,7 +47,7 @@ O gráfico abaixo apresenta a acurácia obtida por diferentes algoritmos testado
 ## 🧠 Inteligência Artificial & Desenvolvimento Próprio
 
 **Modelo Utilizado:** `Complement Naive Bayes`
-**Acurácia:** `68,4%`
+**Acurácia:** `69,0%`
 
  **🛡️ Justificativa Técnica (Eficiência vs. Acurácia):**
 Embora outros modelos pudessem apresentar métricas superiores, a escolha do Naive Bayes com **69,0% de acurácia** foi uma decisão de engenharia focada na **viabilidade do app mobile**:
